@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import './App.css';
 import { ChakraProvider, Container, Input, Text, Button, Box } from "@chakra-ui/react"
 import { readGoogleAsCSV } from '@knight-lab/timelinejs/src/js/core/ConfigFactory';
@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     if(id && data && path){
-      const timeline=new Timeline('tl', path);
+      new Timeline('tl', path);
     }
     
   }, [id, path, data])
